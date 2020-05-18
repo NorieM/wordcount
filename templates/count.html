@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h2>There are {{ count }} words in the submitted text.</h2>
+    {{ fulltext }}
+
+    <a href ='{% url 'home' %}' >New Count</a>
+    <ul>
+    {% for word, frequency in wordcount %}
+        <li>{{ word }} {{ frequency }}</li>
+    {% endfor%}
+    </ul>
+
+</body>
+</html>
